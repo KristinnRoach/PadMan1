@@ -15,6 +15,7 @@ public class PadApplication extends Application {
         stage.setTitle("DrumPad!");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
