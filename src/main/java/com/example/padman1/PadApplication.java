@@ -12,7 +12,6 @@ public class PadApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pad-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 400);
-       // ModuleLayer.Controller padController = fxmlLoader.getController();
         stage.setTitle("DrumPad!");
         stage.setScene(scene);
         stage.show();
