@@ -1,0 +1,20 @@
+    /*
+    private Map<Button, MediaPlayer> padIdMap(Button[] buttons) {
+        Map<Button, MediaPlayer> map = new HashMap<>();
+        for (Button button : buttons) {
+            MediaPlayer mediaPlayer = new MediaPlayer();
+            map.put(button, mediaPlayer);
+        }
+        return map;
+    }
+    private void keysDrumPlay(int index) {
+        currentSamplePack[index].stop();
+        currentSamplePack[index].seek(Duration.ZERO);
+        currentSamplePack[index].play();
+    }
+    private void mouseDrumPlay(int index) {
+        currentSamplePack[index].stop();
+        currentSamplePack[index].seek(Duration.ZERO);
+        currentSamplePack[index].play();
+    }
+  */

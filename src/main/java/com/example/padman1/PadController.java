@@ -11,7 +11,6 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.control.Button;
 import javafx.fxml.FXML;
 import javafx.util.Duration;
-
 import java.io.File;
 import java.net.URL;
 import java.util.Arrays;
@@ -28,13 +27,19 @@ public class PadController implements Initializable {
     private Button[] pads;
     private Map<String, MediaPlayer> padIdMap = new HashMap<>();
     private MediaPlayer[] currentSamplePack;
+    private MediaPlayer[] pnoSamplePack;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         pads = new Button[]{fxPad1, fxPad2, fxPad3, fxPad4, fxPad5, fxPad6, fxPad7, fxPad8, fxPad9};
-        setCurrentSamplePack("src/main/resources/com/example/padman1/Audio/DrumPack1");
+        // setCurrentSamplePack("src/main/resources/com/example/padman1/Audio/DrumPack1");
+        setCurrentSamplePack("src/main/resources/com/example/padman1/Audio/SoftPiano/C4");
+
     }
+
+    // public MediaPlayer[] getPackPaths() { }
 
     private void setCurrentSamplePack(String folderPath) {
 
@@ -43,7 +48,7 @@ public class PadController implements Initializable {
                 -> name.endsWith(".wav") || name.endsWith(".mp3"));
         Arrays.sort(files);
 
-        Media[] samples = new Media[N]; // mínus 1??
+        Media[] samples = new Media[N];
         currentSamplePack = new MediaPlayer[N];
         for (int i = 0; i < 9; i++) {
             samples[i] = new Media(files[i].toURI().toString());
@@ -54,38 +59,17 @@ public class PadController implements Initializable {
         }
     }
 
-    /*
-    private Map<Button, MediaPlayer> padIdMap(Button[] buttons) {
-        Map<Button, MediaPlayer> map = new HashMap<>();
-        for (Button button : buttons) {
-            MediaPlayer mediaPlayer = new MediaPlayer();
-            map.put(button, mediaPlayer);
-        }
-        return map;
-    }
-    private void keysDrumPlay(int index) {
-        currentSamplePack[index].stop();
-        currentSamplePack[index].seek(Duration.ZERO);
-        currentSamplePack[index].play();
-    }
-    private void mouseDrumPlay(int index) {
-        currentSamplePack[index].stop();
-        currentSamplePack[index].seek(Duration.ZERO);
-        currentSamplePack[index].play();
-    }
-  */
-
     @FXML
     private void keyPressedSample(KeyEvent e) {
-        if (e.getCode() == KeyCode.Q) { currentSamplePack[0].stop(); currentSamplePack[0].play(); }
-        if (e.getCode() == KeyCode.W) { currentSamplePack[1].stop(); currentSamplePack[1].play(); }
-        if (e.getCode() == KeyCode.E) { currentSamplePack[2].stop(); currentSamplePack[2].play(); }
-        if (e.getCode() == KeyCode.R) { currentSamplePack[3].stop(); currentSamplePack[3].play(); }
-        if (e.getCode() == KeyCode.T) { currentSamplePack[4].stop(); currentSamplePack[4].play(); }
-        if (e.getCode() == KeyCode.Y) { currentSamplePack[5].stop(); currentSamplePack[5].play(); }
-        if (e.getCode() == KeyCode.U) { currentSamplePack[7].stop(); currentSamplePack[6].stop(); currentSamplePack[6].play(); }
-        if (e.getCode() == KeyCode.I) { currentSamplePack[7].stop(); currentSamplePack[7].play(); }
-        if (e.getCode() == KeyCode.O) { currentSamplePack[8].stop(); currentSamplePack[8].play(); }
+        if (e.getCode() == KeyCode.Z) { currentSamplePack[0].stop(); currentSamplePack[0].play(); }
+        if (e.getCode() == KeyCode.X) { currentSamplePack[1].stop(); currentSamplePack[1].play(); }
+        if (e.getCode() == KeyCode.C) { currentSamplePack[2].stop(); currentSamplePack[2].play(); }
+        if (e.getCode() == KeyCode.A) { currentSamplePack[3].stop(); currentSamplePack[3].play(); }
+        if (e.getCode() == KeyCode.S) { currentSamplePack[4].stop(); currentSamplePack[4].play(); }
+        if (e.getCode() == KeyCode.D) { currentSamplePack[5].stop(); currentSamplePack[5].play(); }
+        if (e.getCode() == KeyCode.Q) { currentSamplePack[7].stop(); currentSamplePack[6].stop(); currentSamplePack[6].play(); }
+        if (e.getCode() == KeyCode.W) { currentSamplePack[7].stop(); currentSamplePack[7].play(); }
+        if (e.getCode() == KeyCode.E) { currentSamplePack[8].stop(); currentSamplePack[8].play(); }
     }
     @FXML
     private void mousePressedSample(MouseEvent e) {
@@ -100,4 +84,3 @@ public class PadController implements Initializable {
         if (e.getSource().equals(fxPad9)) { currentSamplePack[8].stop(); currentSamplePack[8].play(); }
     }
 }
-
