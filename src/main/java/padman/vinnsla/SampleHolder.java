@@ -39,8 +39,9 @@ public class SampleHolder {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Illegal Argument Exception");
-            alert.setContentText("Sample needs to be 'wav' or 'mp3' file");
+            alert.setContentText("Sample needs to be wav or mp3");
             alert.showAndWait();
+            throw new IllegalArgumentException("Sample needs to be wav or mp3");
         }
         Media media = new Media(keySample.toURI().toString());
         mediaPlayers[key] = new MediaPlayer(media);
