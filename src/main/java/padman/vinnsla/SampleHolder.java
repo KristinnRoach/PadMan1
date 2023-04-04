@@ -8,10 +8,6 @@ import javafx.scene.media.MediaPlayer;
 import java.io.File;
 import java.util.Arrays;
 
-/**
- * @Author Kári Einarsson
- * @Email: saumavel@gmail.com
- */
 public class SampleHolder {
     private static final int N = 9; // Max nr of MediaPlayers
     private static Media[] medias = new Media[N];

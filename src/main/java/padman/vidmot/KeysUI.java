@@ -1,5 +1,6 @@
 package padman.vidmot;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.input.*;
 import javafx.scene.layout.GridPane;
@@ -8,21 +9,27 @@ import javafx.fxml.FXML;
 import padman.vinnsla.SampleHolder;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
-public class Keys implements Initializable {
+public class KeysUI implements Initializable {
     @FXML
     private GridPane fxGrid;
     @FXML
     private Button fxPad1, fxPad2, fxPad3, fxPad4, fxPad5, fxPad6, fxPad7, fxPad8, fxPad9;
     private Button[] pads;
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         pads = new Button[] { fxPad1, fxPad2, fxPad3, fxPad4, fxPad5, fxPad6, fxPad7, fxPad8, fxPad9 };
     }
+
+    @FXML
+    private void onButtonFxUI (ActionEvent e) throws IOException {
+        FxUI.loadFxUI();
+    }
+
     @FXML
     private void keyPressedSample(KeyEvent e) {
         int keyIndex = -1;
