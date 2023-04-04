@@ -1,9 +1,9 @@
-module com.example.padman1 {
+module padman.vidmot {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.media;
 
 
-    opens com.example.padman1 to javafx.fxml;
-    exports com.example.padman1;
+    opens padman.vidmot to javafx.fxml;
+    exports padman.vidmot;
 }

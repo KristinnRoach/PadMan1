@@ -1,4 +1,4 @@
-package com.example.padman1;
+package padman.vidmot;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
