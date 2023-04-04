@@ -11,7 +11,7 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.*;
 
-public class PadController implements Initializable {
+public class Keys implements Initializable {
     @FXML
     private GridPane fxGrid;
     @FXML

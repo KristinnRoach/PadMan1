@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PadApplication extends Application {
+public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pad-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("keys-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 400);
         stage.setTitle("DrumPad!");
         stage.setScene(scene);
