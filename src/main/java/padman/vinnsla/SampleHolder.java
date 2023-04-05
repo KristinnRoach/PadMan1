@@ -9,7 +9,7 @@ import java.io.File;
 import java.util.Arrays;
 
 public class SampleHolder {
-    private static final int N = 9; // Max nr of MediaPlayers
+    private static final int N = 40; // Max nr of MediaPlayers
     private static Media[] medias = new Media[N];
     private static MediaPlayer[] mediaPlayers = new MediaPlayer[N];
 
@@ -21,7 +21,7 @@ public class SampleHolder {
                 -> name.endsWith(".wav") || name.endsWith(".mp3"));
         Arrays.sort(files);
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 40; i++) {
             medias[i] = new Media(files[i].toURI().toString());
             mediaPlayers[i] = new MediaPlayer(medias[i]);
         }
