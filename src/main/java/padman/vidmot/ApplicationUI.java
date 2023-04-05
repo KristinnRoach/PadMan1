@@ -18,7 +18,7 @@ public class ApplicationUI extends Application {
     public void start(Stage stage) throws IOException {
         mainStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("keys-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 400, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 590, 280);
         stage.setTitle("KeyNotes");
         stage.setScene(scene);
         stage.show();
