@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.HBox?>
 
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padman.vidmot.FxUI">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padman.vidmot.FxUI">
    <children>
       <Button fx:id="fxHP" mnemonicParsing="false" onAction="#onHP" prefHeight="50.0" prefWidth="70.0" text="HP" />
    </children>
