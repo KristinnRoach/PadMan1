@@ -23,6 +23,7 @@ public class KeysUI implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         pads = new Button[] { fxPad1, fxPad2, fxPad3, fxPad4, fxPad5, fxPad6, fxPad7, fxPad8, fxPad9, fxPad0, fxPadQ, fxPadW, fxPadE, fxPadR, fxPadT, fxPadY, fxPadU, fxPadI, fxPadO, fxPadP, fxPadA, fxPadS, fxPadD, fxPadF, fxPadG, fxPadH, fxPadJ, fxPadK, fxPadL, fxPadÆ, fxPadZ, fxPadX, fxPadC, fxPadV, fxPadB, fxPadN, fxPadM, fxPad10, fxPad11, fxPadÞ};
+        SampleHolder.setSamplesFromFolder("src/main/resources/padman/vidmot/Audio/SoftPiano/Diatonic");
     }
 
     @FXML

@@ -4,8 +4,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import padman.vinnsla.SampleHolder;
+
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class ApplicationUI extends Application {
 
@@ -19,6 +22,7 @@ public class ApplicationUI extends Application {
         mainStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("keys-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 590, 280);
+        //scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("KeyNotes");
         stage.setScene(scene);
         stage.show();
