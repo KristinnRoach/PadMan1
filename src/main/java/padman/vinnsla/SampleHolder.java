@@ -8,9 +8,9 @@ import java.io.File;
 import java.util.Arrays;
 
 public class SampleHolder {
-    private static final int N = 40; // Max nr of MediaPlayers
-    private static Media[] medias = new Media[N];
-    private static MediaPlayer[] mediaPlayers = new MediaPlayer[N];
+    private static final int N = 31; // Max nr of MediaPlayers
+    private static Media[] medias = new Media[31];
+    private static MediaPlayer[] mediaPlayers = new MediaPlayer[31];
 
 
     private static void setSamples(String folderPath) {
@@ -19,11 +19,10 @@ public class SampleHolder {
         File[] files = folder.listFiles((dir, name)
                 -> name.endsWith(".wav") || name.endsWith(".mp3"));
         Arrays.sort(files);
-
-        for (int i = 0; i < 40; i++) {
-            medias[i] = new Media(files[i].toURI().toString());
-            mediaPlayers[i] = new MediaPlayer(medias[i]);
-        }
+        for (int i = 0; i < N; i++) {
+                medias[i] = new Media(files[i].toURI().toString());
+                mediaPlayers[i] = new MediaPlayer(medias[i]);
+            }
         for (MediaPlayer mp : mediaPlayers) {
             mp.setOnEndOfMedia(() -> mp.stop());
         }

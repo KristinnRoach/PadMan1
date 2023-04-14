@@ -22,7 +22,7 @@ public class ApplicationUI extends Application {
         mainStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("keys-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 590, 280);
-        //scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        //scene.getStylesheets().add(getClass().getResource("src/main/java/padman/vinnsla/style.css").toExternalForm());
         stage.setTitle("KeyNotes");
         stage.setScene(scene);
         stage.show();

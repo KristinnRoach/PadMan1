@@ -20,7 +20,7 @@
   -fx-border-color: #e67e22;
   -fx-border-width: 2px;
   -fx-text-fill: white;
-  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 2);
+  -fx-effect: drop shadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 2);
 }
 
 .button:hover {
